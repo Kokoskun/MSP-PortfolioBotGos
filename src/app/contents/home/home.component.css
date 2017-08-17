@@ -1,0 +1,52 @@
+.card-pn{
+	margin: auto;
+	margin-top:2em;
+	width: 200px;
+	height:311px;
+	-webkit-perspective: 536px;
+	-moz-perspective: 536px;
+	perspective: 536px;
+	position: relative;
+	border:none;
+}
+.card-pn:hover .back{
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+.card-pn:hover .front{
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+}
+.faces{
+	height: 311px;
+	width: 200px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	text-align: center;
+	-webkit-transition: 5s;
+	-moz-transition: 5s;
+	-o-transition: 5s;
+	transition: 5s;
+}
+.front{
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	-o-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+.img-portfolio{
+	width:200px;
+	height:311px;
+}
+.box-card-pn{
+	margin-top:3em;
+	margin-bottom:2em;
+}

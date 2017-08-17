@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+	public titleHome:string ="Welcome To My Portfolio";
+	public subTitleHome:string ="Mr.Patipan Nakarin";
+	constructor() { }
+	ngOnInit() {}
 }
