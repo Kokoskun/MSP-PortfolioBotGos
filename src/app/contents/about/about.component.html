@@ -1,9 +1,60 @@
 <div id="About">
 	<div class="columns">
-		<div class="column is-4">
-			<img class="width100" src="assets/images/about/about-me-photo.jpg">
+		<div class="column is-4 mt-top2">
+			<div class="columns">
+				<div class="column is5"></div>
+				<div class="column is-7">
+					<img class="imgOpacity width100" src="assets/images/about/about-me-photo.jpg">
+					<p class="subtitle is-7 has-text-centered"><i>{{infoUser}}</i></p>
+				</div>
+			</div>
 		</div>
-		<div class="column is-2"></div>
-		<div class="column is-6"></div>
+		<div class="column is-2 mt-top2">
+			<a href="assets/images/about/imgFull3.jpg" (mouseover)="actionImageOver('imgOpacity1')" (mouseout)="actionImageOut('imgOpacity1')" data-lity data-lity-desc="Photo1 of My.Patipan Nakarin"><img id="imgOpacity1" class="imgOpacity width100" src="assets/images/about/me03.jpg"></a>
+			<a href="assets/images/about/imgFull2.jpg" (mouseover)="actionImageOver('imgOpacity2')" (mouseout)="actionImageOut('imgOpacity2')" data-lity data-lity-desc="Photo2 of My.Patipan Nakarin"><img id="imgOpacity2" class="imgOpacity width100" src="assets/images/about/me02.jpg"></a>
+			<a href="assets/images/about/imgFull1.jpg" (mouseover)="actionImageOver('imgOpacity3')" (mouseout)="actionImageOut('imgOpacity3')" data-lity data-lity-desc="Photo3 of My.Patipan Nakarin"><img id="imgOpacity3" class="imgOpacity width100" src="assets/images/about/me01.jpg"></a>
+		</div>
+		<div class="column is-6">
+			<p class="title has-text-centered"><i class="fa fa-id-badge" aria-hidden="true"></i> About</p>
+			<p class="is-6 has-text-centered">
+				<b>First Name:</b> {{textFirstName}}
+				&nbsp;&nbsp;
+				<b>Last Name:</b> {{textLastName}}
+			</p>
+			<p class="is-6 has-text-centered">
+				<b>Nickname:</b> {{textNickname}}
+				&nbsp;&nbsp;
+				<b>Gender:</b> {{textGender}}
+			</p>
+			<p class="is-6 has-text-centered">
+				<b>Birth Date:</b> {{textBirthMonth}} {{valueBirthDate}}
+				&nbsp;&nbsp;
+				<b>Birth Year:</b> {{valueBirthYear}}
+			</p>
+			<p class="is-6 has-text-centered" *ngIf="isTimeService">
+				<b>Age:</b> <span *ngIf="myAge">{{myAge}} </span>Years <span *ngIf="beforeBirthMonth">{{beforeBirthMonth}} Month</span> <span *ngIf="beforeBirthDate">{{beforeBirthDate}} Days</span>
+			</p>
+			<p class="is-6 has-text-centered">
+				<b>Languages:</b> {{textLanguages}}
+			</p>
+			<p class="is-6 has-text-centered">
+				<b>Current Position:</b> {{currentPosition}}
+			</p>
+			<br>
+			<div class="columns">
+				<div class="column is-2">
+					<p class="is-6 has-text-centered">
+						<b>Year</b>
+					</p>
+				</div>
+				<div class="column is-8">
+					<p class="is-6 has-text-centered">
+						<b>Senior High School</b>
+					</p>
+				</div>
+				<div class="column is-2">
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

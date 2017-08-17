@@ -1,6 +1,8 @@
 import { Component,OnInit,Input } from '@angular/core';
 import { ContentsComponent } from '../contents.component';
 import { Observable } from 'rxjs/Rx';
+import * as $ from 'jquery';
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -22,6 +24,7 @@ export class AboutComponent implements OnInit {
 	public nameUniversity:string='Thammasat University';
 	public bachelorUniversity:string='Bachelor of Engineering Program';
 	public concentrationUniversity:string='Concentration in Software Engineering';
+	public currentPosition:string='Full Stack Developer/Student';
 	public beforeBirthDate:number;
 	public beforeBirthMonth:number;
 	public valueBirthDate:number = 13;
@@ -175,6 +178,14 @@ export class AboutComponent implements OnInit {
 	}
 	private getBirthYear(valueFullYear){
 			this.myAge = valueFullYear;
+	}
+	private actionImageOver(localImage:string){
+		 $('#'+localImage).addClass("ld ld-heartbeat x4");
+		 setTimeout(function(){ $('#'+localImage).removeClass("ld ld-heartbeat x4"); }, 2680);
+		 
+	}
+	private actionImageOut(localImage:string){
+		$('#'+localImage).removeClass("ld ld-heartbeat x4");
 	}
    ngOnInit() {
 		Observable.interval(1000).subscribe(() => {

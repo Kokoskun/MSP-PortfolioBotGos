@@ -1,0 +1,9 @@
+.imgOpacity{
+    opacity: 0.5; border-radius: 5%;
+}
+.imgOpacity:hover{
+    opacity: 1;
+}
+.mt-top2{
+  margin-top:2.125rem;
+}
