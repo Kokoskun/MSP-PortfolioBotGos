@@ -1,8 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Athiti:400,700&subset=latin-ext,thai,vietnamese');
 body{
 	font-family: 'Athiti', sans-serif;
-	color:#4a4a4a;
 }
 .text-center{
 	text-align: center;
