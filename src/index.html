@@ -2,19 +2,49 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>PortfolioPN</title>
+  <title>Portfolio-PN</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Portfolio of PN">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <meta property="og:url" content="https://patipan-nakarin.com" />
-  <meta property="og:title" content="Portfolio of PN" />
-  <meta property="og:image" content="assets/images/logo.png" />
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-586207068486d967"></script> 
+  <meta property="og:url" content="https://patipan-nakarin.com">
+  <meta property="og:title" content="Portfolio of PN">
+  <meta property="og:image" content="assets/images/logo.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileImage" content="assets/images/logo/logo-pn-144.png" sizes="144x144">
+  <meta name="msapplication-TileColor" content="#22384D">
+  <meta name="theme-color" content="#22384D"/>
+  <link rel="apple-touch-icon" href="assets/images/logo/logo-pn-120.png">
+  <link rel="icon" href="assets/images/logo/logo-pn-192.png" sizes="192x192">
+  <link rel="icon" href="assets/images/logo/logo-pn-128.png" sizes="128x128">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-586207068486d967"></script>   
 </head>
 <body>
   <app-root>
     <div class='uil-ring-css' style='transform:scale(0.78);margin:auto;margin-top:10%;'><div></div></div>
     <h3 class="has-text-centered">Loading...</h3>
   </app-root>
+  <script type="text/javascript">
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("service-worker.js").then(function(registration) {
+        }).catch(function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      }
+    window.addEventListener('beforeinstallprompt', function(e) {
+      e.userChoice.then(function(choiceResult) {
+        console.log(choiceResult.outcome);
+        if(choiceResult.outcome == 'dismissed') {
+          console.log('User cancelled home screen install');
+        }
+        else {
+          console.log('User added to home screen');
+        }
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+{
+  "name": "Portfolio PN",
+  "short_name": "Portfolio PN",
+  "icons": [{
+    "src": "assets/images/logo/logo-pn-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": "assets/images/logo/logo-pn-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }, {
+      "src": "assets/images/logo/logo-pn-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }, {
+      "src": "assets/images/logo/logo-pn-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "assets/images/logo/logo-pn-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }, {  
+      "src": "assets/images/logo/logo-pn-384.png",  
+      "sizes": "384x384",  
+      "type": "image/png"  
+    }, {  
+      "src": "assets/images/logo/logo-pn-512.png",  
+      "sizes": "512x512",  
+      "type": "image/png"  
+    }],
+  "start_url": "/",  
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#22384D",
+  "theme_color": "#22384D"
+}
