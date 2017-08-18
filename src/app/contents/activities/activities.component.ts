@@ -6,13 +6,21 @@ import * as $ from 'jquery';
   styleUrls: ['./activities.component.css']
 })
 export class ActivitiesComponent implements OnInit {
-  private actionImageOver(localImage:string){
+  public actionImageOverShake(localImage:string){
     $('#'+localImage).addClass("ld ld-shake x4");
     setTimeout(function(){ $('#'+localImage).removeClass("ld ld-shake x4"); }, 3500);		 
   }
-	private actionImageOut(localImage:string){
+	public actionImageOutShake(localImage:string){
 		$('#'+localImage).removeClass("ld ld-shake x4");
-	}
+  }
+	public actionImageOverHeartbeat(localImage:string){
+    $('#'+localImage).addClass("ld ld-heartbeat x4");
+    setTimeout(function(){ $('#'+localImage).removeClass("ld ld-heartbeat x4"); }, 3000);
+    
+ }
+ public actionImageOutHeartbeat(localImage:string){
+   $('#'+localImage).removeClass("ld ld-heartbeat x4");
+ }
   constructor() { }
   ngOnInit() {
   }

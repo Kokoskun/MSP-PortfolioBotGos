@@ -179,12 +179,12 @@ export class AboutComponent implements OnInit {
 	private getBirthYear(valueFullYear){
 			this.myAge = valueFullYear;
 	}
-	private actionImageOver(localImage:string){
+	public actionImageOver(localImage:string){
 		 $('#'+localImage).addClass("ld ld-heartbeat x4");
 		 setTimeout(function(){ $('#'+localImage).removeClass("ld ld-heartbeat x4"); }, 3000);
 		 
 	}
-	private actionImageOut(localImage:string){
+	public actionImageOut(localImage:string){
 		$('#'+localImage).removeClass("ld ld-heartbeat x4");
 	}
    ngOnInit() {

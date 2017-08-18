@@ -9,11 +9,11 @@ export class SkillsComponent implements OnInit {
   constructor() { }
   ngOnInit() {
   }
-	private actionImageOver(localImage:string){
+	public actionImageOverTick(localImage:string){
 		 $('#'+localImage).addClass("ld ld-tick x4");
      setTimeout(function(){ $('#'+localImage).removeClass("ld ld-tick x4"); }, 3500);		 
 	}
-  private actionImageOver1(localImage:string){
+  public actionImageOverJump(localImage:string){
 		 $('#'+localImage).addClass("ld ld-jump x4");
      setTimeout(function(){ $('#'+localImage).removeClass("ld ld-jump x4"); }, 3500);		 
 	}
