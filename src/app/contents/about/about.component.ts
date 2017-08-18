@@ -181,7 +181,7 @@ export class AboutComponent implements OnInit {
 	}
 	private actionImageOver(localImage:string){
 		 $('#'+localImage).addClass("ld ld-heartbeat x4");
-		 setTimeout(function(){ $('#'+localImage).removeClass("ld ld-heartbeat x4"); }, 2680);
+		 setTimeout(function(){ $('#'+localImage).removeClass("ld ld-heartbeat x4"); }, 3000);
 		 
 	}
 	private actionImageOut(localImage:string){

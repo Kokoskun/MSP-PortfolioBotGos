@@ -1,60 +1,155 @@
 <div id="About">
 	<div class="columns">
-		<div class="column is-4 mt-top2">
+		<div class="column is-4 mt-top2 is-hidden-mobile">
 			<div class="columns">
 				<div class="column is5"></div>
 				<div class="column is-7">
-					<img class="imgOpacity width100" src="assets/images/about/about-me-photo.jpg">
+					<img class="width100" src="assets/images/about/about-me-photo.jpg">
 					<p class="subtitle is-7 has-text-centered"><i>{{infoUser}}</i></p>
 				</div>
 			</div>
 		</div>
-		<div class="column is-2 mt-top2">
+		<div class="column is-2 mt-top2 is-hidden-mobile">
 			<a href="assets/images/about/imgFull3.jpg" (mouseover)="actionImageOver('imgOpacity1')" (mouseout)="actionImageOut('imgOpacity1')" data-lity data-lity-desc="Photo1 of My.Patipan Nakarin"><img id="imgOpacity1" class="imgOpacity width100" src="assets/images/about/me03.jpg"></a>
 			<a href="assets/images/about/imgFull2.jpg" (mouseover)="actionImageOver('imgOpacity2')" (mouseout)="actionImageOut('imgOpacity2')" data-lity data-lity-desc="Photo2 of My.Patipan Nakarin"><img id="imgOpacity2" class="imgOpacity width100" src="assets/images/about/me02.jpg"></a>
 			<a href="assets/images/about/imgFull1.jpg" (mouseover)="actionImageOver('imgOpacity3')" (mouseout)="actionImageOut('imgOpacity3')" data-lity data-lity-desc="Photo3 of My.Patipan Nakarin"><img id="imgOpacity3" class="imgOpacity width100" src="assets/images/about/me01.jpg"></a>
 		</div>
 		<div class="column is-6">
-			<p class="title has-text-centered"><i class="fa fa-id-badge" aria-hidden="true"></i> About</p>
-			<p class="is-6 has-text-centered">
+			<p class="title has-text-centered"><b><i class="fa fa-id-badge" aria-hidden="true"></i> About</b></p>
+			<table class="widthTable100 is-hidden-tablet">
+				<tr class="widthTable100">
+					<td class="widthTable25"></td>
+					<td class="widthTable50">
+						<img class="radius-circle width100" src="assets/images/about/me02.jpg">
+					</td>
+					<td class="widthTable25"></td>
+				</tr>
+			</table>
+			<p class="has-text-centered">
 				<b>First Name:</b> {{textFirstName}}
 				&nbsp;&nbsp;
 				<b>Last Name:</b> {{textLastName}}
 			</p>
-			<p class="is-6 has-text-centered">
+			<p class="has-text-centered">
 				<b>Nickname:</b> {{textNickname}}
 				&nbsp;&nbsp;
 				<b>Gender:</b> {{textGender}}
 			</p>
-			<p class="is-6 has-text-centered">
+			<p class="has-text-centered">
 				<b>Birth Date:</b> {{textBirthMonth}} {{valueBirthDate}}
 				&nbsp;&nbsp;
 				<b>Birth Year:</b> {{valueBirthYear}}
 			</p>
-			<p class="is-6 has-text-centered" *ngIf="isTimeService">
+			<p class="has-text-centered" *ngIf="isTimeService">
 				<b>Age:</b> <span *ngIf="myAge">{{myAge}} </span>Years <span *ngIf="beforeBirthMonth">{{beforeBirthMonth}} Month</span> <span *ngIf="beforeBirthDate">{{beforeBirthDate}} Days</span>
 			</p>
-			<p class="is-6 has-text-centered">
+			<p class="has-text-centered">
 				<b>Languages:</b> {{textLanguages}}
 			</p>
-			<p class="is-6 has-text-centered">
-				<b>Current Position:</b> {{currentPosition}}
-			</p>
-			<br>
-			<div class="columns">
+			<div class="columns is-hidden-touch mt-top1">
+				<div class="column is-1"></div>
 				<div class="column is-2">
-					<p class="is-6 has-text-centered">
+					<p class="has-text-centered">
 						<b>Year</b>
 					</p>
+					<p class="has-text-centered mt-top05">
+						<i class="subtitle is-7">{{yearFullHighSchool}}</i>
+					</p>
 				</div>
-				<div class="column is-8">
-					<p class="is-6 has-text-centered">
+				<div class="column is-6">
+					<p class="has-text-centered">
 						<b>Senior High School</b>
+					</p>
+					<p class="has-text-centered">
+						{{nameHighSchool}}
+					</p>
+					<p class="has-text-centered">
+						{{majorHighSchool}}
 					</p>
 				</div>
 				<div class="column is-2">
+					<img class="width100" src="assets/images/about/logo_tu0.png">
 				</div>
+				<div class="column is-1"></div>
 			</div>
+			<div class="is-hidden-desktop mt-top1">
+				<p class="has-text-centered">
+					<b>Senior High School</b>
+				</p>
+				<p class="has-text-centered">
+					{{nameHighSchool}}
+				</p>
+				<p class="has-text-centered">
+					{{majorHighSchool}}
+				</p>
+			</div>
+			<div class="columns is-hidden-touch">
+				<div class="column is-1"></div>
+				<div class="column is-2">
+					<p class="has-text-centered">
+						<b>Year</b>
+					</p>
+					<p class="has-text-centered mt-top1">
+						<i class="subtitle is-7">{{yearFullUniversity}}</i>
+					</p>
+				</div>
+				<div class="column is-6">
+					<p class="has-text-centered">
+						<b>Higher Education</b>
+					</p>
+					<p class="has-text-centered">
+						{{bachelorUniversity}}
+					</p>
+					<p class="has-text-centered">
+						{{concentrationUniversity}}
+					</p>
+					<p class="has-text-centered mt-top05">
+						<span *ngIf="valueYearEducation"><b>Year</b> {{valueYearEducation}}</span> 
+						<span *ngIf="valueSemesterEducation"><b>Semester</b> {{valueSemesterEducation}}</span>
+					</p>
+					<p class="has-text-centered" *ngIf="valueSemesterEducation">
+						<i class="subtitle is-7">
+							<span> {{valueYearAgoEducation}} Year:</span> 
+							<span> {{valueMonthEducation}} Month:</span> 
+							<span> {{valueDayEducation}} Days:</span> 
+							<span> {{valueHoursEducation}} Hours:</span> 
+							<span> {{valueMinutesEducation}} Minutes </span>
+						</i>
+					</p>
+				</div>
+				<div class="column is-2">
+					<img class="width100" src="assets/images/about/logo_university.png">
+				</div>
+				<div class="column is-1"></div>
+			</div>
+			<div class="is-hidden-desktop mt-top1">
+					<p class="has-text-centered">
+						<b>Higher Education</b>
+					</p>
+					<p class="has-text-centered">
+						{{bachelorUniversity}}
+					</p>
+					<p class="has-text-centered">
+						{{concentrationUniversity}}
+					</p>
+					<p class="has-text-centered mt-top05">
+						<span *ngIf="valueYearEducation"><b>Year</b> {{valueYearEducation}}</span> 
+						<span *ngIf="valueSemesterEducation"><b>Semester</b> {{valueSemesterEducation}}</span>
+					</p>
+					<p class="has-text-centered" *ngIf="valueSemesterEducation">
+						<i class="subtitle is-7">
+							<span> {{valueYearAgoEducation}} Year:</span> 
+							<span> {{valueMonthEducation}} Month:</span> 
+							<span> {{valueDayEducation}} Days:</span> 
+							<span> {{valueHoursEducation}} Hours:</span> 
+							<span> {{valueMinutesEducation}} Minutes </span>
+						</i>
+					</p>
+			</div>
+			<p class="has-text-centered">
+				<span class="is-hidden-mobile"><b>Current Position:</b> {{currentPosition}}</span>
+				<span class="is-hidden-tablet"><br><b>Current Position:</b> {{currentPosition}}</span>
+			</p>
 		</div>
 	</div>
 </div>
